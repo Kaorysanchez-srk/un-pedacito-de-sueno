@@ -1,9 +1,607 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Un Pedacito de Sueño</title>
+    <meta name="description" content="Descubre fondos de pantalla aesthetic, frases bonitas y diseños digitales para celular y computadora.">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Un Pedacito de Sueño</h1>
+
+    <header>
+        <h1>Un Pedacito de Sueño</h1>
+        <p>Diseños que se sienten como un pensamiento bonito ♡</p>
+
+        
+        <nav>
+            <a href="#" onclick="mostrarPantalla('inicio'); return false;">Inicio</a>
+            <a href="#" onclick="mostrarPantalla('catalogo'); return false;">Catálogo</a>
+            <a href="#" onclick="mostrarPantalla('nosotros'); return false;">Nosotros</a>
+            <a href="#" onclick="mostrarPantalla('carrito'); return false;">
+    🛒 Carrito (<span id="contador-carrito">0</span>)
+</a>
+        </nav>
+
+    </header>
+
+    
+<section id="inicio" class="pantalla activa">
+
+    <div class="portada-inicio">
+        <div class="texto-portada">
+            <p class="frase-pequena">UN ESPACIO HECHO A TU MANERA</p>
+
+            <h2>Pequeños detalles,<br>grandes momentos.</h2>
+
+            <p>
+                Fondos y diseños para acompañarte
+                en tus días, tus ideas y esos pequeños
+                momentos que hacen todo más bonito.
+            </p>
+
+            <a href="#" class="boton"
+                onclick="mostrarPantalla('catalogo'); return false;">
+                Descubrir colección
+            </a>
+        </div>
+
+        <div class="imagen-portada">
+            <img src="imagenes/atardecer.png"
+                 alt="Cafecito junto a la ventana durante el atardecer">
+        </div>
+    </div>
+
+</section>
+
+
+    <section id="catalogo" class="pantalla">
+        <h2>Nuestra colección</h2>
+        <p>Pequeños detalles para acompañar tus días.</p>
+
+        <div class="productos">
+
+            <div class="producto">
+                <img src="imagenes/fondo-celular.jpeg"
+                     alt="Fondo aesthetic para celular">
+                <h3>Un sueño en mi pantalla</h3>
+                <p>Fondo digital para celular.</p>
+                <p class="precio">$15 MXN</p>
+                <button type="button" onclick="verDetalle(0)">Ver diseño</button>
+               
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/fondo-computadora.jpeg"
+                     alt="Fondo aesthetic para computadora">
+                <h3>Mi pequeño universo</h3>
+                <p>Fondo digital para computadora.</p>
+                <p class="precio">$25 MXN</p>
+                <button type="button" onclick="mostrarPantalla('computadoras')">Ver diseños</button>
+                
+            </div>
+
+             <div class="producto">
+                <img src="imagenes/stickers.jpeg" alt="Colección de stickers digitales">
+                <h3>Bonita</h3>
+                <p>Stickers digitales con frases y dibujos.</p>
+                <p class="precio">$20 MXN</p>
+                <button type="button" onclick="mostrarPantalla('stickers')">Ver diseños</button>
+               
+            </div>
+        </div>
+    </section>
+   <section id="stickers" class="pantalla">
+    <h2>Stickers digitales</h2>
+    <p>Pequeños detalles para llenar tu mundo de ternura.</p>
+<div class="productos">
+            <div class="producto">
+                <img src="imagenes/stickers.jpeg" alt="Colección de stickers">
+                <h3>Bonita</h3>
+                <p>Stickers digitales con frases y dibujos.</p>
+                <p class="precio">$20 MXN</p>
+                <button type="button" onclick="verDetalle(10)">Ver diseño</button>
+                <button type="button" onclick="agregarAlCarrito(10)">
+    Agregar al carrito
+</button>
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/stickers2.jpeg" alt="Stickers de gatitos">
+                <h3>Simplemente yo</h3>
+                <p>Stickers tiernos para decorar a tu estilo.</p>
+                <p class="precio">$20 MXN</p>
+                <button type="button" onclick="verDetalle(11)">Ver diseño</button>
+                <button type="button" onclick="agregarAlCarrito(11)">
+    Agregar al carrito
+</button>
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/stickers3.jpeg" alt="Stickers de café">
+                <h3>Ternura</h3>
+                <p>Pequeños detalles para los amantes del café.</p>
+                <p class="precio">$20 MXN</p>
+                <button type="button" onclick="verDetalle(12)">Ver diseño</button>
+                <button type="button" onclick="agregarAlCarrito(12)">
+    Agregar al carrito
+</button>
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/stickers4.jpeg" alt="Stickers de animalitos">
+                <h3>Amigos peluditos</h3>
+                <p>Animalitos para llenar tu colección de ternura.</p>
+                <p class="precio">$20 MXN</p>
+                <button type="button" onclick="verDetalle(13)">Ver diseño</button>
+                <button type="button" onclick="agregarAlCarrito(13)">
+    Agregar al carrito
+</button>
+            </div>
+
+            <div class="producto">
+                <img src="imagenes/stickers5.jpeg" alt="Stickers decorativos">
+                <h3>Pequeños detalles</h3>
+                <p>Stickers para expresar tu personalidad.</p>
+                <p class="precio">$20 MXN</p>
+                <button type="button" onclick="verDetalle(14)">Ver diseño</button>
+                <button type="button" onclick="agregarAlCarrito(14)">
+    Agregar al carrito
+</button>
+            </div>
+    </div>
+        <button type="button" class="boton" style="margin-top: 20px;" onclick="mostrarPantalla('catalogo')">
+        Volver al catálogo
+    </button>
+</section>
+
+
+    <section id="computadoras" class="pantalla">
+        <h2>Fondos para computadora</h2>
+        <p>Un pequeño universo para tu espacio digital.</p>
+        <div id="detalle-computadora" style="display: none;">
+        <h3 id="nombre-computadora"></h3>
+        <img id="imagen-computadora" src="" alt="Fondo para computadora" width="400">
+        <p id="precio-computadora"></p>
+        <p id="descripcion-computadora"></p>
+
+        <button type="button" onclick="document.getElementById('detalle-computadora').style.display='none'; document.getElementById('otros-computadora').style.display='flex';">
+            Volver a los fondos
+        </button>
+    </div>
+
+    <div id="otros-computadora" class="productos">
+
+        <div class="producto">
+            <img src="imagenes/fondo-computadora.jpeg" alt="Fondo para computadora">
+            <h3>Mi pequeño universo</h3>
+            <p class="precio">$25 MXN</p>
+            <button type="button" onclick="verDetalle(6)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(6)">
+    Agregar al carrito
+</button>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/fondo-computadora2.jpeg" alt="Segundo fondo para computadora">
+            <h3>Un mundo tranquilo</h3>
+            <p class="precio">$25 MXN</p>
+            <button type="button" onclick="verDetalle(7)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(7)">
+    Agregar al carrito
+</button>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/fondo-computadora3.jpeg" alt="Tercer fondo para computadora">
+            <h3>Al final del día</h3>
+            <p class="precio">$25 MXN</p>
+            <button type="button" onclick="verDetalle(8)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(8)">
+    Agregar al carrito
+</button>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/fondo-computadora4.jpeg" alt="Cuarto fondo para computadora">
+            <h3>Un sueño digital</h3>
+            <p class="precio">$25 MXN</p>
+            <button type="button" onclick="verDetalle(9)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(9)">
+    Agregar al carrito
+</button>
+        </div>
+
+    </div>
+
+    <button type="button" class="boton" onclick="mostrarPantalla('catalogo')">
+        Volver al catálogo
+    </button>
+</section>
+
+<section id="detalle" class="pantalla">
+    <h2 id="nombre-detalle">Nombre del diseño</h2>
+
+    <img id="imagen-detalle" src="imagenes/fondo-celular.jpeg" alt="Diseño seleccionado">
+
+    <p id="precio-detalle">$0</p>
+
+    <p id="descripcion-detalle">
+        Aquí aparecerá la descripción del diseño.
+    </p>
+
+    <div id="otros-fondos" style="display: none;">
+        <h3>Más fondos para celular</h3>
+
+        <div class="producto">
+            <img src="imagenes/fondo-celular.jpeg" alt="Fondo para celular">
+            <h3>Un sueño en mi pantalla</h3>
+            <p class="precio">$15 MXN</p>
+            <button type="button" onclick="verDetalle(0)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(0)">
+            Agregar al carrito
+</button>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/fondo-celular2.jpeg" alt="Segundo fondo para celular">
+            <h3>Un pedacito de cielo</h3>
+            <p class="precio">$15 MXN</p>
+            <button type="button" onclick="verDetalle(1)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(1)">
+    Agregar al carrito
+</button>
+        </div>
+        
+        <div class="producto">
+            <img src="imagenes/fondo-celular3.jpeg" alt="Tercer fondo para celular">
+            <h3>El atardecer soñado</h3>
+            <p class="precio">$15 MXN</p>
+            <button type="button" onclick="verDetalle(2)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(2)">
+    Agregar al carrito
+</button>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/fondo-celular4.jpeg" alt="Cuarto fondo para celular">
+            <h3>Un rincón de paz</h3>
+            <p class="precio">$15 MXN</p>
+            <button type="button" onclick="verDetalle(3)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(3)">
+    Agregar al carrito
+</button>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/fondo-celular5.jpeg" alt="Quinto fondo para celular">
+            <h3>Un poquito de magia</h3>
+            <p class="precio">$15 MXN</p>
+            <button type="button" onclick="verDetalle(4)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(4)">
+    Agregar al carrito
+</button>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/fondo-celular6.jpeg" alt="Sexto fondo para celular">
+            <h3>Solo soy yo</h3>
+            <p class="precio">$15 MXN</p>
+            <button type="button" onclick="verDetalle(5)">Ver este fondo</button>
+            <button type="button" onclick="agregarAlCarrito(5)">
+    Agregar al carrito
+</button>
+        </div>
+        
+
+<button type="button" class="boton" onclick="mostrarPantalla('catalogo')">
+    Volver al catálogo
+</button>
+
+
+
+    </div>
+    <div id="otros-stickers" style="display: none;">
+    <h3>Más stickers bonitos</h3>
+
+    <div class="productos">
+        <div class="producto" onclick="verDetalle(10)">
+            <img src="imagenes/stickers.jpeg" alt="Bonita">
+            <h3>Bonita</h3>
+           <button type="button" onclick="event.stopPropagation(); agregarAlCarrito(10)">
+        Agregar al carrito
+    </button>
+        </div>
+
+        <div class="producto" onclick="verDetalle(11)">
+            <img src="imagenes/stickers2.jpeg" alt="Solo yo">
+            <h3>Solo yo</h3>
+            <button type="button" onclick="event.stopPropagation(); agregarAlCarrito(11)">
+        Agregar al carrito
+    </button>
+        </div>
+
+        <div class="producto" onclick="verDetalle(12)">
+            <img src="imagenes/stickers3.jpeg" alt="Ternura">
+            <h3>Ternura</h3>
+            <button type="button" onclick="event.stopPropagation(); agregarAlCarrito(12)">
+        Agregar al carrito
+    </button>
+        </div>
+
+        <div class="producto" onclick="verDetalle(13)">
+            <img src="imagenes/stickers4.jpeg" alt="Amigos peluditos">
+            <h3>Amigos peluditos</h3>
+           <button type="button" onclick="event.stopPropagation(); agregarAlCarrito(13)">
+        Agregar al carrito
+    </button>
+        </div>
+
+        <div class="producto" onclick="verDetalle(14)">
+            <img src="imagenes/stickers5.jpeg" alt="Pequeños detalles">
+            <h3>Pequeños detalles</h3>
+            <button type="button" onclick="event.stopPropagation(); agregarAlCarrito(14)">
+        Agregar al carrito
+    </button>
+    </div>
+</div>
+
+    <button type="button" class="boton" onclick="mostrarPantalla('catalogo')">
+        Volver a la colección
+    </button>
+</section>
+
+
+
+   
+<section id="nosotros" class="pantalla">
+    <h2>Un poquito de inspiración</h2>
+
+    <p>
+        Creemos que los pequeños detalles pueden convertir
+        un espacio cotidiano en algo especial.
+        Cada diseño guarda un pensamiento, un sueño
+        o un pedacito de nuestra imaginación.
+    </p>
+
+    <div class="imagen-nosotros">
+        <img src="imagenes/SRK.jpeg" alt="Ilustración de SRK">
+        <h3>Un pedacito de mí ♡</h3>
+        <p>
+            Detrás de cada diseño hay un poquito de imaginación,
+            creatividad y sueños que compartir.
+        </p>
+    </div>
+</section>
+
+
+<section id="carrito" class="pantalla">
+    <h2>Mi carrito de sueños</h2>
+    <p>Aquí aparecerán los diseños que quieras llevar contigo.</p>
+
+    <div id="productos-carrito">
+    <p>Tu carrito está vacío por ahora.</p>
+</div>
+
+<h3>Total: $<span id="total-carrito">0</span> MXN</h3>
+
+    <button type="button" class="boton"
+        onclick="mostrarPantalla('catalogo')">
+        Seguir explorando
+    </button>
+</section>
+
+    <footer>
+        <p>© 2026 Un Pedacito de Sueño</p>
+        <p>Hecho con cariño ♡</p>
+    </footer>
+
+<script>
+    var carrito = [];
+
+
+function agregarAlCarrito(numero) {
+    var productos = [
+        { nombre: "Un sueño en mi pantalla", precio: 15 },
+        { nombre: "Un pedacito de cielo", precio: 15 },
+        { nombre: "El atardecer soñado", precio: 15 },
+        { nombre: "Un rincón de paz", precio: 15 },
+        { nombre: "Un poquito de magia", precio: 15 },
+        { nombre: "Solo soy yo", precio: 15 },
+        { nombre: "Mi pequeño universo", precio: 25 },
+        { nombre: "Un mundo tranquilo", precio: 25 },
+        { nombre: "Al final del día", precio: 25 },
+        { nombre: "Un sueño digital", precio: 25 },
+        { nombre: "Bonita", precio: 20 },
+        { nombre: "Simplemente yo", precio: 20 },
+        { nombre: "Ternura", precio: 20 },
+        { nombre: "Amigos peluditos", precio: 20 },
+        { nombre: "Pequeños detalles", precio: 20 }
+    ];
+
+    carrito.push(productos[numero]);
+    actualizarCarrito();
+}
+
+function quitarDelCarrito(numero) {
+    carrito.splice(numero, 1);
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    document.getElementById("contador-carrito").textContent = carrito.length;
+
+    var lista = document.getElementById("productos-carrito");
+    lista.innerHTML = "";
+
+    var total = 0;
+
+    if (carrito.length === 0) {
+        lista.innerHTML = "<p>Tu carrito está vacío por ahora.</p>";
+    }
+
+    for (var i = 0; i < carrito.length; i++) {
+        lista.innerHTML +=
+            "<p>" + carrito[i].nombre +
+            " - $" + carrito[i].precio + " MXN " +
+            "<button type='button' onclick='quitarDelCarrito(" + i + ")'>Quitar</button></p>";
+
+        total = total + carrito[i].precio;
+    }
+
+    document.getElementById("total-carrito").textContent = total;
+}
+
+    function mostrarPantalla(id) {
+        document.querySelectorAll(".pantalla").forEach(function(pantalla) {
+            pantalla.classList.remove("activa");
+        });
+
+        document.getElementById(id).classList.add("activa");
+    }
+    
+    function verDetalle(numero) {
+        
+        var productos = [
+            {
+                nombre: "Un sueño en mi pantalla",
+                precio: "$15",
+                descripcion: "Un diseño especial para darle personalidad a tu celular."
+            },
+            {
+                nombre: "Un pedacito de cielo",
+                precio: "$15",
+                descripcion: "Un fondo bonito para personalizar tu celular."
+            },
+            {
+                nombre: "El atardecer soñado",
+                precio: "$15",
+                descripcion: "Un fondo para darle un toque especial a tu celular."
+            },
+            {
+                nombre: "Un rincón de paz",
+                precio: "$15",
+                descripcion: "Un diseño para llenar tu pantalla de tranquilidad."
+            },
+            {
+                nombre: "Un poquito de magia",
+                precio: "$15",
+                descripcion: "Un fondo bonito para acompañarte todos los días."
+            },
+            {
+                nombre: "Solo soy yo",
+                precio: "$15",
+                descripcion: "Un diseño dulce para personalizar tu celular."
+            },
+            {
+                nombre: "Fondo para computadora",
+                precio: "$25",
+                descripcion: "Un fondo bonito para personalizar tu espacio digital."
+            },
+            {
+                nombre: "Un mundo tranquilo",
+                precio: "$25",
+                descripcion: "Un fondo bonito para darle calma a tu computadora."
+            },
+            {
+                nombre: "Al final del día",
+                precio: "$25",
+                descripcion: "Un diseño para personalizar tu espacio digital."
+            },
+            {
+                nombre: "Un sueño digital",
+                precio: "$25",
+                descripcion: "Un fondo especial para acompañar tus días."
+            },
+            {
+                nombre: "Stickers digitales",
+                precio: "$20",
+                descripcion: "Detalles digitales para decorar y expresar tu estilo."
+            },
+            {
+                nombre: "Simplemente yo",
+                precio: "$20",
+                descripcion: "Un sticker tierno para darle un toque lindo a tus cosas."
+            },
+            {
+                nombre: "Ternura",
+                precio: "$20",
+                descripcion: "Un diseño acogedor para los amantes del café."
+            },
+            {
+                nombre: "Amigos peluditos",
+                precio: "$20",
+                descripcion: "Stickers de animalitos para llenar tu espacio de ternura."
+            },
+            {
+                nombre: "Pequeños detalles",
+                precio: "$20",
+                descripcion: "Una colección de stickers para decorar a tu estilo."
+            }
+        ];
+
+
+       
+        
+        
+        var imagenes = [
+            "imagenes/fondo-celular.jpeg",
+            "imagenes/fondo-celular2.jpeg",
+            "imagenes/fondo-celular3.jpeg",
+            "imagenes/fondo-celular4.jpeg",
+            "imagenes/fondo-celular5.jpeg",
+            "imagenes/fondo-celular6.jpeg",
+            "imagenes/fondo-computadora.jpeg",
+            "imagenes/fondo-computadora2.jpeg",
+            "imagenes/fondo-computadora3.jpeg",
+            "imagenes/fondo-computadora4.jpeg",
+            "imagenes/stickers.jpeg",
+            "imagenes/stickers2.jpeg",
+            "imagenes/stickers3.jpeg",
+            "imagenes/stickers4.jpeg",
+            "imagenes/stickers5.jpeg"
+        ];
+
+
+
+
+       
+    if (numero >= 6 && numero <= 9) {
+    document.getElementById("nombre-computadora").textContent = productos[numero].nombre;
+    document.getElementById("imagen-computadora").src = imagenes[numero];
+    document.getElementById("precio-computadora").textContent = productos[numero].precio;
+    document.getElementById("descripcion-computadora").textContent = productos[numero].descripcion;
+
+    document.getElementById("otros-computadora").style.display = "none";
+    document.getElementById("detalle-computadora").style.display = "block";
+    mostrarPantalla("computadoras");
+
+} else {
+    document.getElementById("nombre-detalle").textContent = productos[numero].nombre;
+    document.getElementById("imagen-detalle").src = imagenes[numero];
+    document.getElementById("precio-detalle").textContent = productos[numero].precio;
+    document.getElementById("descripcion-detalle").textContent = productos[numero].descripcion;
+
+    if (numero >= 0 && numero <= 5) {
+    document.getElementById("otros-fondos").style.display = "flex";
+    document.getElementById("otros-stickers").style.display = "none";
+
+} else if (numero >= 10 && numero <= 14) {
+    document.getElementById("otros-fondos").style.display = "none";
+    document.getElementById("otros-stickers").style.display = "block";
+
+} else {
+    document.getElementById("otros-fondos").style.display = "none";
+    document.getElementById("otros-stickers").style.display = "none";
+}
+
+    mostrarPantalla("detalle");
+}
+    }
+
+</script>
 </body>
 </html>
+
+
